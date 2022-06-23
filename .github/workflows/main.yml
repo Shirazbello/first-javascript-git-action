@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
+      - name: First action step
         id: hello
         uses: Shirazbello/first-javascript-git-action@v1.1
         with:
           who-to-greet: 'Shiraz The Geek'
       # Use the output from the `hello` step
-      - name: Get the output time
+      - name: output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
